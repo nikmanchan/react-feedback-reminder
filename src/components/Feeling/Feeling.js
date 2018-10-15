@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NextButton from '../NextButton/NextButton';
 
 
 class Feeling extends Component {
@@ -7,7 +8,11 @@ class Feeling extends Component {
 
       <div>
         <p>How are you feeling today?</p>
+
+        <NextButton path={'/2'} 
+                            name={'next'}/>
       </div>
+      
     );
   }
 }
