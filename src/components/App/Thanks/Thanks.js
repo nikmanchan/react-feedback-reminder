@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 
 class Thanks extends Component {
   handleClick = () => {
+    this.props.dispatch({
+      type: 'CLEAR_FEEDBACK'
+    });
     this.props.history.push('/')
 }
   render() {
@@ -18,4 +21,8 @@ class Thanks extends Component {
   }
 }
 
-export default Thanks;
+const mapStateToProps = reduxState => ({
+  reduxState,
+});
+
+export default connect(mapStateToProps)(Thanks);
